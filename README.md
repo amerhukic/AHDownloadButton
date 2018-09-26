@@ -1,5 +1,5 @@
 <p align="center">
-<img src="Logo.png" width="420" max-width="80%" alt="Logo" />
+<img src="https://raw.githubusercontent.com/amerhukic/AHDownloadButton/master/Logo.png" width="420" max-width="80%" alt="Logo" />
 </p>
 
 <p align="center">
@@ -18,7 +18,7 @@
 **AHDownloadButton** is a customizable download button similar to the download button in the latest version of Apple's App Store app (since iOS 11).
 It features download progress animation as well as animated transitions between download states: start download, pending, downloading and downloaded. [You can find more details about the implementation on my blog](https://amerhukic.com/replicating-app-store-download-button).
 
-<p align="center"><img src="/Demo.gif"/>
+<p align="center"><img src="https://raw.githubusercontent.com/amerhukic/AHDownloadButton/master/Demo.gif"/>
 </p>
 
 ## Requirements
