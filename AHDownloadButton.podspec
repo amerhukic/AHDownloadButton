@@ -4,7 +4,7 @@ Pod::Spec.new do |s|
   s.summary          = 'Customisable download button with progress animation'
 
   s.description      = <<-DESC
-  AHDownloadButton is a customisable download button similar to the download button in newest version of the Apple App Store app (since iOS 11).
+  AHDownloadButton is a customisable download button similar to the download button in the latest version of Apple's App Store app (since iOS 11).
   It features download progress animation as well as animated transitions between download states: start download, pending, downloading and downloaded. 
                        DESC
 
