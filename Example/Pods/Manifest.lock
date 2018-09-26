@@ -1,0 +1,16 @@
+PODS:
+  - AHDownloadButton (1.0.0)
+
+DEPENDENCIES:
+  - AHDownloadButton (from `../`)
+
+EXTERNAL SOURCES:
+  AHDownloadButton:
+    :path: ../
+
+SPEC CHECKSUMS:
+  AHDownloadButton: ecc4690a3d6dad17d3a6460c8cbd5252c7948071
+
+PODFILE CHECKSUM: fecba5d42722f860c18eaf524c809427ca655eab
+
+COCOAPODS: 1.4.0

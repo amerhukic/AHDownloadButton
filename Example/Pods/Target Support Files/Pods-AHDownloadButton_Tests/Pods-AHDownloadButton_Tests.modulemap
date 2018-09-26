@@ -1,0 +1,6 @@
+framework module Pods_AHDownloadButton_Tests {
+  umbrella header "Pods-AHDownloadButton_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

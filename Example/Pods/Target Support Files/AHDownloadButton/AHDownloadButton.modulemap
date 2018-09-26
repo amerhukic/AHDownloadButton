@@ -1,0 +1,6 @@
+framework module AHDownloadButton {
+  umbrella header "AHDownloadButton-umbrella.h"
+
+  export *
+  module * { export * }
+}
