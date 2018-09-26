@@ -124,6 +124,10 @@ extension DownloadViewController: AHDownloadButtonDelegate {
   - `downloadedButtonNonhighlightedBackgroundColor` - background color for the button when it's in nonhighlighted state (when the button is not pressed)
   - `downloadedButtonHighlightedTitleColor` - title color for the button when it's in highlighted state (when the user presses the button)
   - `downloadedButtonNonhighlightedTitleColor` - title color for the button when it's in nonhighlighted state (when the button is not pressed)
+  
+### Special note
+
+`AHDownloadButton` in `startDownload` and `downloaded` states calculates its width based on **button title**. Use the `startDownloadButtonTitleSidePadding` and `downloadedButtonTitleSidePadding` properties to customise the width when the button is in the aforementioned states.
 
 ## Example
 
