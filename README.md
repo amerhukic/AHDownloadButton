@@ -20,6 +20,7 @@ It features download progress animation as well as animated transitions between 
 
 <p align="center"><img src="/Demo.gif"/>
 </p>
+
 ## Requirements
 
 - iOS 8.0+
