@@ -12,17 +12,9 @@ class CircleView: UIView {
     
     // MARK: Properties
     
-    var startAngleRadians: CGFloat = -CGFloat.pi / 2 {
-        didSet {
-      //      setNeedsLayout()
-        }
-    }
+    var startAngleRadians: CGFloat = -CGFloat.pi / 2
     
-    var endAngleRadians: CGFloat = 3 * CGFloat.pi / 2 {
-        didSet {
-      //      setNeedsLayout()
-        }
-    }
+    var endAngleRadians: CGFloat = 3 * CGFloat.pi / 2
     
     var lineWidth: CGFloat = 1 {
         didSet {
