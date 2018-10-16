@@ -32,9 +32,11 @@ It features download progress animation as well as animated transitions between 
 ### Code
 To use `AHDownloadButton` in code, you simply create a new instance and add it as a subview to your desired view:
 ```swift
-  let downloadButton = AHDownloadButton()
-  downloadButton.frame = CGRect(origin: origin, size: size)
-  view.addSubview(downloadButton)
+import AHDownloadButton
+
+let downloadButton = AHDownloadButton()
+downloadButton.frame = CGRect(origin: origin, size: size)
+view.addSubview(downloadButton)
 ```
 The button can have 4 different states:
 - `startDownload` - initial state before downloading
@@ -48,6 +50,21 @@ The state of the button can be changed through its `state` property.
 You can use the `AHDownloadButtonDelegate` to monitor taps on the button and update button's state if needed. To update the current download progress, use the `progress` property. Here is an example how it could be implemented:  
 
 ```swift
+import AHDownloadButton
+
+class DownloadViewController: UIViewController {
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        let downloadButton = AHDownloadButton()
+        downloadButton.frame = CGRect(origin: origin, size: size)
+        view.addSubview(downloadButton)
+        
+        downloadButton.delegate = self // <--
+    }
+}
+
 extension DownloadViewController: AHDownloadButtonDelegate {
 
     func didTapDownloadButton(withCurrentState state: AHDownloadButton.State) {
