@@ -68,6 +68,7 @@ extension DownloadViewController: AHDownloadButtonDelegate {
         case .pending:
             break
         case .downloading, .downloaded:
+            downloadTimer?.invalidate()
             downloadButton.progress = 0
             downloadButton.state = .startDownload
         }
