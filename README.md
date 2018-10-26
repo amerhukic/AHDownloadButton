@@ -50,7 +50,7 @@ You can use the `AHDownloadButtonDelegate` to monitor taps on the button and upd
 ```swift
 extension DownloadViewController: AHDownloadButtonDelegate {
 
-    func didTapDownloadButton(withCurrentState state: AHDownloadButton.State) {
+    func didTapDownloadButton(withState state: AHDownloadButton.State) {
         switch state {
         case .startDownload:
 
