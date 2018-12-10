@@ -114,6 +114,14 @@ public final class AHDownloadButton: UIView {
             downloadingButton.highlightedStopViewColor = downloadingButtonHighlightedStopViewColor
         }
     }
+
+    public var downloadingCircleLineWidth: CGFloat {
+        get {
+            return downloadingButton.circleViewLineWidth
+        } set {
+            downloadingButton.circleViewLineWidth = newValue
+        }
+    }
     
     public var progress: CGFloat = 0 {
         didSet {
