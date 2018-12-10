@@ -53,8 +53,8 @@ class DownloadViewController: UIViewController {
 }
 
 extension DownloadViewController: AHDownloadButtonDelegate {
-    
-    func didTapDownloadButton(withState state: AHDownloadButton.State) {
+
+    func downloadButton(_ downloadButton: AHDownloadButton, didTapWithState state: AHDownloadButton.State) {
         switch state {
         case .startDownload:
             downloadTimer?.invalidate()

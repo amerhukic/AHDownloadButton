@@ -9,7 +9,16 @@
 import UIKit
 
 public protocol AHDownloadButtonDelegate: class {
-    func didTapDownloadButton(withState state: AHDownloadButton.State)
+    @available(*, deprecated: 1.1.0, message: "Use downloadButton(_:, didTapWithState:) method")
+    func didTapDownloadButton(_ downloadButton: AHDownloadButton, withState state: AHDownloadButton.State)
+    func downloadButton(_ downloadButton: AHDownloadButton, stateChanged state: AHDownloadButton.State)
+    func downloadButton(_ downloadButton: AHDownloadButton, didTapWithState state: AHDownloadButton.State)
+}
+
+public extension AHDownloadButtonDelegate {
+    func didTapDownloadButton(_ downloadButton: AHDownloadButton, withState state: AHDownloadButton.State) { }
+    func downloadButton(_ downloadButton: AHDownloadButton, stateChanged state: AHDownloadButton.State) { }
+    func downloadButton(_ downloadButton: AHDownloadButton, didTapWithState state: AHDownloadButton.State) { }
 }
 
 public final class AHDownloadButton: UIView {
@@ -173,6 +182,7 @@ public final class AHDownloadButton: UIView {
     
     public var state: State = .startDownload {
         didSet {
+            delegate?.downloadButton(self, stateChanged: state)
             animationQueue.async { [currentState = state] in
                 self.animationDispatchGroup.enter()
                 
@@ -385,7 +395,7 @@ public final class AHDownloadButton: UIView {
     // MARK: Action methods
     
     @objc private func currentButtonTapped() {
-        delegate?.didTapDownloadButton(withState: state)
+        delegate?.downloadButton(self, didTapWithState: state)
         didTapDownloadButtonAction?(state)
     }
     
