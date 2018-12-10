@@ -24,57 +24,18 @@ extension UIView {
     
     func pinToSuperview() {
         translatesAutoresizingMaskIntoConstraints = false
-        let topConstraint = NSLayoutConstraint(item: self,
-                                               attribute: .top,
-                                               relatedBy: .equal,
-                                               toItem: superview,
-                                               attribute: .top,
-                                               multiplier: 1,
-                                               constant: 0)
-        
-        let leftConstraint = NSLayoutConstraint(item: self,
-                                                attribute: .left,
-                                                relatedBy: .equal,
-                                                toItem: superview,
-                                                attribute: .left,
-                                                multiplier: 1,
-                                                constant: 0)
-        
-        let bottomConstraint = NSLayoutConstraint(item: self,
-                                                  attribute: .bottom,
-                                                  relatedBy: .equal,
-                                                  toItem: superview,
-                                                  attribute: .bottom,
-                                                  multiplier: 1,
-                                                  constant: 0)
-        
-        let rightConstraint = NSLayoutConstraint(item: self,
-                                                 attribute: .right,
-                                                 relatedBy: .equal,
-                                                 toItem: superview,
-                                                 attribute: .right,
-                                                 multiplier: 1,
-                                                 constant: 0)
-        NSLayoutConstraint.activate([topConstraint, leftConstraint, bottomConstraint, rightConstraint])
+        let topConstraint = self.constraint(attribute: .top, toItem: superview, toAttribute: .top)
+        let bottomConstraint = self.constraint(attribute: .bottom, toItem: superview, toAttribute: .bottom)
+        let leadingConstraint = constraint(attribute: .leading, toItem: superview, toAttribute: .leading)
+        let trailingConstraint = self.constraint(attribute: .trailing, toItem: superview, toAttribute: .trailing)
+        NSLayoutConstraint.activate([trailingConstraint, topConstraint, leadingConstraint, bottomConstraint])
     }
     
     func centerToSuperview() {
         translatesAutoresizingMaskIntoConstraints = false
-        let centerXConstraint = NSLayoutConstraint(item: self,
-                                                   attribute: .centerX,
-                                                   relatedBy: .equal,
-                                                   toItem: superview,
-                                                   attribute: .centerX,
-                                                   multiplier: 1,
-                                                   constant: 0)
+        let centerXConstraint = constraint(attribute: .centerX, toItem: superview, toAttribute: .centerX)
         
-        let centerYConstraint = NSLayoutConstraint(item: self,
-                                                   attribute: .centerY,
-                                                   relatedBy: .equal,
-                                                   toItem: superview,
-                                                   attribute: .centerY,
-                                                   multiplier: 1,
-                                                   constant: 0)
+        let centerYConstraint = constraint(attribute: .centerY, toItem: superview, toAttribute: .centerY)
         NSLayoutConstraint.activate([centerXConstraint, centerYConstraint])
     }
     
