@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ProgressButton: UIControl {
+final class ProgressButton: UIControl {
     
     // MARK: Properties
     

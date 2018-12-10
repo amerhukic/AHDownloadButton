@@ -12,7 +12,7 @@ public protocol AHDownloadButtonDelegate: class {
     func didTapDownloadButton(withState state: AHDownloadButton.State)
 }
 
-public class AHDownloadButton: UIView {
+public final class AHDownloadButton: UIView {
     
     public enum State {
         case startDownload
@@ -318,109 +318,42 @@ public class AHDownloadButton: UIView {
     
     private func setUpStartDownloadButtonConstraints() {
         startDownloadButton.translatesAutoresizingMaskIntoConstraints = false
-        let topConstraint = NSLayoutConstraint(item: startDownloadButton,
-                                               attribute: .top,
-                                               relatedBy: .equal,
-                                               toItem: self,
-                                               attribute: .top,
-                                               multiplier: 1,
-                                               constant: 0)
+        let topConstraint = startDownloadButton.constraint(attribute: .top, toItem: self, toAttribute: .top)
         
-        let bottomConstraint = NSLayoutConstraint(item: startDownloadButton,
-                                                  attribute: .bottom, relatedBy: .equal,
-                                                  toItem: self,
-                                                  attribute: .bottom,
-                                                  multiplier: 1,
-                                                  constant: 0)
+        let bottomConstraint = startDownloadButton.constraint(attribute: .bottom, toItem: self, toAttribute: .bottom)
+
+        let centerXConstraint = startDownloadButton.constraint(attribute: .centerX, toItem: self, toAttribute: .centerX)
         
-        let centerXConstraint = NSLayoutConstraint(item: startDownloadButton,
-                                                   attribute: .centerX, relatedBy: .equal,
-                                                   toItem: self,
-                                                   attribute: .centerX,
-                                                   multiplier: 1,
-                                                   constant: 0)
-        
-        startDownloadButtonWidthConstraint = NSLayoutConstraint(item: startDownloadButton,
-                                                                attribute: .width,
-                                                                relatedBy: .equal,
-                                                                toItem: nil,
-                                                                attribute: .width,
-                                                                multiplier: 1,
-                                                                constant: 50)
+        startDownloadButtonWidthConstraint = startDownloadButton.constraint(attribute: .width, constant: 50)
+
         NSLayoutConstraint.activate([topConstraint, bottomConstraint, centerXConstraint, startDownloadButtonWidthConstraint])
     }
     
     private func setUpPendingButtonConstraints() {
         pendingCircleView.centerToSuperview()
-        let heightConstraint = NSLayoutConstraint(item: pendingCircleView,
-                                                  attribute: .height,
-                                                  relatedBy: .equal,
-                                                  toItem: pendingCircleView,
-                                                  attribute: .width,
-                                                  multiplier: 1,
-                                                  constant: 0)
+        let heightConstraint = pendingCircleView.constraint(attribute: .height, relation: .equal, toItem: pendingCircleView, toAttribute: .width)
         
-        pendingViewWidthConstraint = NSLayoutConstraint(item: pendingCircleView,
-                                                 attribute: .width,
-                                                 relatedBy: .equal,
-                                                 toItem: nil,
-                                                 attribute: .width,
-                                                 multiplier: 1,
-                                                 constant: 30)
+        pendingViewWidthConstraint = pendingCircleView.constraint(attribute: .width, constant: 30)
         NSLayoutConstraint.activate([heightConstraint, pendingViewWidthConstraint])
     }
     
     private func setUpDownloadingButtonConstraints() {
         downloadingButton.centerToSuperview()
-        let heightConstraint = NSLayoutConstraint(item: downloadingButton,
-                                                  attribute: .height,
-                                                  relatedBy: .equal,
-                                                  toItem: downloadingButton,
-                                                  attribute: .width,
-                                                  multiplier: 1,
-                                                  constant: 0)
-        
-        downloadingButtonWidthConstraint = NSLayoutConstraint(item: downloadingButton,
-                                                        attribute: .width,
-                                                        relatedBy: .equal,
-                                                        toItem: nil,
-                                                        attribute: .width,
-                                                        multiplier: 1,
-                                                        constant: 30)
+        let heightConstraint = downloadingButton.constraint(attribute: .height, toItem: downloadingButton, toAttribute: .width)
+
+        downloadingButtonWidthConstraint = downloadingButton.constraint(attribute: .width, constant: 30)
+
         NSLayoutConstraint.activate([heightConstraint, downloadingButtonWidthConstraint])
     }
     
     private func setUpDownloadedButtonConstraints() {
         downloadedButton.translatesAutoresizingMaskIntoConstraints = false
-        let topConstraint = NSLayoutConstraint(item: downloadedButton,
-                                               attribute: .top,
-                                               relatedBy: .equal,
-                                               toItem: self,
-                                               attribute: .top,
-                                               multiplier: 1,
-                                               constant: 0)
-        
-        let bottomConstraint = NSLayoutConstraint(item: downloadedButton,
-                                                  attribute: .bottom, relatedBy: .equal,
-                                                  toItem: self,
-                                                  attribute: .bottom,
-                                                  multiplier: 1,
-                                                  constant: 0)
-        
-        let centerXConstraint = NSLayoutConstraint(item: downloadedButton,
-                                                   attribute: .centerX, relatedBy: .equal,
-                                                   toItem: self,
-                                                   attribute: .centerX,
-                                                   multiplier: 1,
-                                                   constant: 0)
-        
-        downloadedButtonWidthConstraint = NSLayoutConstraint(item: downloadedButton,
-                                                                attribute: .width,
-                                                                relatedBy: .equal,
-                                                                toItem: nil,
-                                                                attribute: .width,
-                                                                multiplier: 1,
-                                                                constant: 50)
+        let topConstraint = downloadedButton.constraint(attribute: .top, toItem: self, toAttribute: .top)
+        let bottomConstraint = downloadedButton.constraint(attribute: .bottom, toItem: self, toAttribute: .bottom)
+        let centerXConstraint = downloadedButton.constraint(attribute: .centerX, toItem: self, toAttribute: .centerX)
+
+        downloadedButtonWidthConstraint = downloadedButton.constraint(attribute: .width, constant: 50)
+
         NSLayoutConstraint.activate([topConstraint, bottomConstraint, centerXConstraint, downloadedButtonWidthConstraint])
     }
     

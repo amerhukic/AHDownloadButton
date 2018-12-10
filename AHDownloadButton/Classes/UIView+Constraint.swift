@@ -9,6 +9,18 @@
 import UIKit
 
 extension UIView {
+
+    @discardableResult
+    func constraint(attribute: NSLayoutConstraint.Attribute, relation: NSLayoutConstraint.Relation = .equal, toItem: Any? = nil, toAttribute: NSLayoutConstraint.Attribute = .notAnAttribute, multiplier: CGFloat = 1, constant: CGFloat = 0) -> NSLayoutConstraint {
+        let constraint = NSLayoutConstraint(item: self,
+                           attribute: attribute,
+                           relatedBy: relation,
+                           toItem: toItem,
+                           attribute: toAttribute,
+                           multiplier: multiplier,
+                           constant: constant)
+        return constraint
+    }
     
     func pinToSuperview() {
         translatesAutoresizingMaskIntoConstraints = false
