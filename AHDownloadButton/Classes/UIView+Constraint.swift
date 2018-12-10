@@ -12,6 +12,7 @@ extension UIView {
 
     @discardableResult
     func constraint(attribute: NSLayoutConstraint.Attribute, relation: NSLayoutConstraint.Relation = .equal, toItem: Any? = nil, toAttribute: NSLayoutConstraint.Attribute = .notAnAttribute, multiplier: CGFloat = 1, constant: CGFloat = 0) -> NSLayoutConstraint {
+        translatesAutoresizingMaskIntoConstraints = false
         let constraint = NSLayoutConstraint(item: self,
                            attribute: attribute,
                            relatedBy: relation,

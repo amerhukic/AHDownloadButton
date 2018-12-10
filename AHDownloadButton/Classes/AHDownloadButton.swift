@@ -29,8 +29,24 @@ public final class AHDownloadButton: UIView {
         case downloading
         case downloaded
     }
+
+    public enum HorizontalAlignment: Int {
+        case trailing, leading, center, left, right
+
+        var relativeLayoutAttribute: NSLayoutConstraint.Attribute {
+            switch self {
+            case .center: return .centerX
+            case .trailing: return .trailing
+            case .leading: return .leading
+            case .right: return .right
+            case .left: return .left
+            }
+        }
+    }
     
     // MARK: Public properties
+
+    public var contentHorizontalAlignment: HorizontalAlignment = .left
     
     /// Start download button customisation properties
     
@@ -244,6 +260,9 @@ public final class AHDownloadButton: UIView {
     var pendingViewWidthConstraint: NSLayoutConstraint!
     var downloadingButtonWidthConstraint: NSLayoutConstraint!
     var downloadedButtonWidthConstraint: NSLayoutConstraint!
+    var horizontalAlignmentAttribute: NSLayoutConstraint.Attribute {
+        return contentHorizontalAlignment.relativeLayoutAttribute
+    }
     
     var startDownloadButtonTitleWidth: CGFloat = 0 {
         didSet {
@@ -335,44 +354,46 @@ public final class AHDownloadButton: UIView {
     // MARK: Constraints setup
     
     private func setUpStartDownloadButtonConstraints() {
-        startDownloadButton.translatesAutoresizingMaskIntoConstraints = false
         let topConstraint = startDownloadButton.constraint(attribute: .top, toItem: self, toAttribute: .top)
         
         let bottomConstraint = startDownloadButton.constraint(attribute: .bottom, toItem: self, toAttribute: .bottom)
 
-        let centerXConstraint = startDownloadButton.constraint(attribute: .centerX, toItem: self, toAttribute: .centerX)
+        let horizontalPositionConstraint = startDownloadButton.constraint(attribute: horizontalAlignmentAttribute, toItem: self, toAttribute: horizontalAlignmentAttribute)
         
         startDownloadButtonWidthConstraint = startDownloadButton.constraint(attribute: .width, constant: 50)
 
-        NSLayoutConstraint.activate([topConstraint, bottomConstraint, centerXConstraint, startDownloadButtonWidthConstraint])
+        NSLayoutConstraint.activate([topConstraint, bottomConstraint, horizontalPositionConstraint, startDownloadButtonWidthConstraint])
     }
     
     private func setUpPendingButtonConstraints() {
-        pendingCircleView.centerToSuperview()
+        let horizontalPositionConstraint = pendingCircleView.constraint(attribute: horizontalAlignmentAttribute, toItem: self, toAttribute: horizontalAlignmentAttribute)
         let heightConstraint = pendingCircleView.constraint(attribute: .height, relation: .equal, toItem: pendingCircleView, toAttribute: .width)
+        let verticalPositionConstraint = pendingCircleView.constraint(attribute: .centerY, toItem: self, toAttribute: .centerY)
         
         pendingViewWidthConstraint = pendingCircleView.constraint(attribute: .width, constant: 30)
-        NSLayoutConstraint.activate([heightConstraint, pendingViewWidthConstraint])
+        NSLayoutConstraint.activate([horizontalPositionConstraint, verticalPositionConstraint, heightConstraint, pendingViewWidthConstraint])
     }
     
     private func setUpDownloadingButtonConstraints() {
-        downloadingButton.centerToSuperview()
+        let horizontalPositionConstraint = downloadingButton.constraint(attribute: horizontalAlignmentAttribute, toItem: self, toAttribute: horizontalAlignmentAttribute)
+        let verticalPositionConstraint = downloadingButton.constraint(attribute: .centerY, toItem: self, toAttribute: .centerY)
+
         let heightConstraint = downloadingButton.constraint(attribute: .height, toItem: downloadingButton, toAttribute: .width)
 
         downloadingButtonWidthConstraint = downloadingButton.constraint(attribute: .width, constant: 30)
 
-        NSLayoutConstraint.activate([heightConstraint, downloadingButtonWidthConstraint])
+        NSLayoutConstraint.activate([horizontalPositionConstraint, verticalPositionConstraint, heightConstraint, downloadingButtonWidthConstraint])
     }
     
     private func setUpDownloadedButtonConstraints() {
-        downloadedButton.translatesAutoresizingMaskIntoConstraints = false
         let topConstraint = downloadedButton.constraint(attribute: .top, toItem: self, toAttribute: .top)
         let bottomConstraint = downloadedButton.constraint(attribute: .bottom, toItem: self, toAttribute: .bottom)
-        let centerXConstraint = downloadedButton.constraint(attribute: .centerX, toItem: self, toAttribute: .centerX)
+        let horizontalPositionConstraint = downloadedButton.constraint(attribute: horizontalAlignmentAttribute, toItem: self, toAttribute: horizontalAlignmentAttribute)
 
+        // This constraint will be changed later on (in layoutSubviews), here we're just creating it
         downloadedButtonWidthConstraint = downloadedButton.constraint(attribute: .width, constant: 50)
 
-        NSLayoutConstraint.activate([topConstraint, bottomConstraint, centerXConstraint, downloadedButtonWidthConstraint])
+        NSLayoutConstraint.activate([topConstraint, bottomConstraint, horizontalPositionConstraint, downloadedButtonWidthConstraint])
     }
     
     // MARK: Method overrides
