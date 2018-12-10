@@ -45,8 +45,6 @@ public final class AHDownloadButton: UIView {
     }
     
     // MARK: Public properties
-
-    public var contentHorizontalAlignment: HorizontalAlignment = .left
     
     /// Start download button customisation properties
     
@@ -248,7 +246,9 @@ public final class AHDownloadButton: UIView {
         button.addTarget(self, action: #selector(currentButtonTapped), for: .touchUpInside)
         return button
     }()
-    
+
+    let contentHorizontalAlignment: HorizontalAlignment
+
     // MARK: Animation
     
     let animationDispatchGroup = DispatchGroup()
@@ -285,13 +285,20 @@ public final class AHDownloadButton: UIView {
     }
     
     // MARK: Initializers
-    
+    public init(alignment: HorizontalAlignment) {
+        contentHorizontalAlignment = alignment
+        super.init(frame: .zero)
+        commonInit()
+    }
+
     public override init(frame: CGRect) {
+        contentHorizontalAlignment = .center
         super.init(frame: frame)
         commonInit()
     }
     
     public required init?(coder aDecoder: NSCoder) {
+        contentHorizontalAlignment = .center
         super.init(coder: aDecoder)
         commonInit()
     }
