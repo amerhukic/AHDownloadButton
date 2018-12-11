@@ -336,6 +336,9 @@ public final class AHDownloadButton: UIView {
         pendingCircleView.circleColor = pendingCircleColor
         pendingCircleView.lineWidth = pendingCircleLineWidth
         pendingCircleView.alpha = 0
+
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(currentButtonTapped))
+        pendingCircleView.addGestureRecognizer(tapGesture)
     }
     
     private func setUpDownloadingButtonProperties() {
