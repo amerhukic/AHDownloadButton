@@ -30,7 +30,8 @@ class DownloadViewController: UIViewController {
         downloadButton.startDownloadButtonTitleSidePadding = 40
         
         downloadButton.pendingCircleLineWidth = 5
-        
+        downloadButton.downloadingCircleLineWidth = 5
+
         downloadButton.downloadedButtonTitle = "OPEN"
         downloadButton.downloadedButtonTitleFont = UIFont.boldSystemFont(ofSize: 35)
         downloadButton.downloadedButtonTitleSidePadding = 40
@@ -52,8 +53,8 @@ class DownloadViewController: UIViewController {
 }
 
 extension DownloadViewController: AHDownloadButtonDelegate {
-    
-    func didTapDownloadButton(withState state: AHDownloadButton.State) {
+
+    func downloadButton(_ downloadButton: AHDownloadButton, didTapWithState state: AHDownloadButton.State) {
         switch state {
         case .startDownload:
             downloadTimer?.invalidate()

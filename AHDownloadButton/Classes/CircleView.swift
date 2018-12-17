@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CircleView: UIView {
+final class CircleView: UIView {
     
     // MARK: Properties
     

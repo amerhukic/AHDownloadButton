@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HighlightableRoundedButton: UIButton {
+final class HighlightableRoundedButton: UIButton {
     
     // MARK: Properties
     

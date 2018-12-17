@@ -8,9 +8,16 @@
 
 import UIKit
 
-class ProgressButton: UIControl {
+final class ProgressButton: UIControl {
     
     // MARK: Properties
+
+    var circleViewLineWidth: CGFloat = 6 {
+        didSet {
+            progressCircleView.lineWidth = circleViewLineWidth
+            trackCircleView.lineWidth = circleViewLineWidth
+        }
+    }
     
     let stopView: UIView = {
         let view = UIView()
@@ -19,16 +26,16 @@ class ProgressButton: UIControl {
         return view
     }()
     
-    let trackCircleView: CircleView = {
+    lazy var trackCircleView: CircleView = {
         let circleView = CircleView()
-        circleView.lineWidth = 6
+        circleView.lineWidth = circleViewLineWidth
         circleView.isUserInteractionEnabled = false
         return circleView
     }()
     
-    let progressCircleView: ProgressCircleView = {
+    lazy var progressCircleView: ProgressCircleView = {
         let view = ProgressCircleView()
-        view.lineWidth = 6
+        view.lineWidth = circleViewLineWidth
         view.isUserInteractionEnabled = false
         return view
     }()
@@ -117,21 +124,9 @@ class ProgressButton: UIControl {
         
         addSubview(stopView)
         stopView.centerToSuperview()
-        let heightConstraint = NSLayoutConstraint(item: stopView,
-                                                  attribute: .height,
-                                                  relatedBy: .equal,
-                                                  toItem: stopView,
-                                                  attribute: .width,
-                                                  multiplier: 1,
-                                                  constant: 0)
-        
-        let widthConstraint = NSLayoutConstraint(item: stopView,
-                                                 attribute: .width,
-                                                 relatedBy: .equal,
-                                                 toItem: self,
-                                                 attribute: .width,
-                                                 multiplier: 0.3,
-                                                 constant: 0)
+        let heightConstraint = stopView.constraint(attribute: .height, toItem: stopView, toAttribute: .width)
+        let widthConstraint = stopView.constraint(attribute: .width, toItem: self, toAttribute: .width, multiplier: 0.3, constant: 0)
+
         NSLayoutConstraint.activate([heightConstraint, widthConstraint])
         updateColors()
     }
