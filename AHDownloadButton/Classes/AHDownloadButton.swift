@@ -9,16 +9,16 @@
 import UIKit
 
 public protocol AHDownloadButtonDelegate: class {
-    @available(*, deprecated: 1.1.0, message: "Use downloadButton(_:, didTapWithState:) method")
+    @available(*, deprecated: 1.1.0, message: "Use downloadButton(_:, tappedWithState:) method")
     func didTapDownloadButton(_ downloadButton: AHDownloadButton, withState state: AHDownloadButton.State)
     func downloadButton(_ downloadButton: AHDownloadButton, stateChanged state: AHDownloadButton.State)
-    func downloadButton(_ downloadButton: AHDownloadButton, didTapWithState state: AHDownloadButton.State)
+    func downloadButton(_ downloadButton: AHDownloadButton, tappedWithState state: AHDownloadButton.State)
 }
 
 public extension AHDownloadButtonDelegate {
     func didTapDownloadButton(_ downloadButton: AHDownloadButton, withState state: AHDownloadButton.State) { }
     func downloadButton(_ downloadButton: AHDownloadButton, stateChanged state: AHDownloadButton.State) { }
-    func downloadButton(_ downloadButton: AHDownloadButton, didTapWithState state: AHDownloadButton.State) { }
+    func downloadButton(_ downloadButton: AHDownloadButton, tappedWithState state: AHDownloadButton.State) { }
 }
 
 public final class AHDownloadButton: UIView {
@@ -426,7 +426,7 @@ public final class AHDownloadButton: UIView {
     // MARK: Action methods
     
     @objc private func currentButtonTapped() {
-        delegate?.downloadButton(self, didTapWithState: state)
+        delegate?.downloadButton(self, tappedWithState: state)
         didTapDownloadButtonAction?(state)
     }
     
