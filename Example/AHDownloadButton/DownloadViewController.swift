@@ -30,7 +30,7 @@ class DownloadViewController: UIViewController {
         downloadButton.startDownloadButtonTitleSidePadding = 40
         
         downloadButton.pendingCircleLineWidth = 5
-        downloadButton.downloadingCircleLineWidth = 5
+        downloadButton.downloadingButtonCircleLineWidth = 5
 
         downloadButton.downloadedButtonTitle = "OPEN"
         downloadButton.downloadedButtonTitleFont = UIFont.boldSystemFont(ofSize: 35)

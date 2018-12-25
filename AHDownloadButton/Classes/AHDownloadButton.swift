@@ -138,11 +138,9 @@ public final class AHDownloadButton: UIView {
         }
     }
 
-    public var downloadingCircleLineWidth: CGFloat {
-        get {
-            return downloadingButton.circleViewLineWidth
-        } set {
-            downloadingButton.circleViewLineWidth = newValue
+    public var downloadingButtonCircleLineWidth: CGFloat = 6 {
+        didSet {
+            downloadingButton.circleViewLineWidth = downloadingButtonCircleLineWidth
         }
     }
     
