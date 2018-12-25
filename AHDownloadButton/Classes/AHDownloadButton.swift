@@ -195,6 +195,7 @@ public final class AHDownloadButton: UIView {
     public var state: State = .startDownload {
         didSet {
             delegate?.downloadButton(self, stateChanged: state)
+            downloadButtonStateChangedAction?(self, state)
             animationQueue.async { [currentState = state] in
                 self.animationDispatchGroup.enter()
                 
@@ -217,7 +218,9 @@ public final class AHDownloadButton: UIView {
     
     public weak var delegate: AHDownloadButtonDelegate?
     
-    public var didTapDownloadButtonAction: ((_ currentState: State) -> Void)?
+    public var didTapDownloadButtonAction: ((AHDownloadButton, State) -> Void)?
+    
+    public var downloadButtonStateChangedAction: ((AHDownloadButton, State) -> Void)?
 
     // MARK: Private properties
     
@@ -283,6 +286,7 @@ public final class AHDownloadButton: UIView {
     }
     
     // MARK: Initializers
+    
     public init(alignment: HorizontalAlignment) {
         contentHorizontalAlignment = alignment
         super.init(frame: .zero)
@@ -425,7 +429,7 @@ public final class AHDownloadButton: UIView {
     
     @objc private func currentButtonTapped() {
         delegate?.downloadButton(self, tappedWithState: state)
-        didTapDownloadButtonAction?(state)
+        didTapDownloadButtonAction?(self, state)
     }
     
 }
