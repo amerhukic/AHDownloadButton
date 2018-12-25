@@ -7,6 +7,9 @@
     <a href="https://cocoapods.org/pods/AHDownloadButton">
         <img src="https://img.shields.io/cocoapods/v/AHDownloadButton.svg?style=flat" alt="Pod Version">
     </a>
+    <a href="https://github.com/Carthage/Carthage">
+        <img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat" alt="Carthage compatible">
+    </a>
     <a href="">
         <img src="https://img.shields.io/badge/Licence-MIT-green.svg" alt="License">
     </a>
@@ -50,7 +53,7 @@ You can use the `AHDownloadButtonDelegate` to monitor taps on the button and upd
 ```swift
 extension DownloadViewController: AHDownloadButtonDelegate {
 
-    func didTapDownloadButton(withState state: AHDownloadButton.State) {
+    func downloadButton(_ downloadButton: AHDownloadButton, tappedWithState state: AHDownloadButton.State)
         switch state {
         case .startDownload:
 
@@ -84,11 +87,16 @@ extension DownloadViewController: AHDownloadButtonDelegate {
 }
 ```
 
+You can also use closures instead of the `AHDownloadButtonDelegate` by setting the `didTapDownloadButtonAction` and `downloadButtonStateChangedAction` properties.
+
 ### Customisation
 
 `AHDownloadButton` can be customized. These are the properties that can be used for customizing the button:
 
-1. Customization properties when button is in `startDownload` state:
+1.  Use the custom initializer  `init(alignment: HorizontalAlignment)` to set the horizontal alignment property. `HorizontalAlignment` determines the position of the pending and downloading circles. The position can either be  `center` , `left` or `right`. The default value is `center`.
+
+
+2. Customization properties when button is in `startDownload` state:
 
   - `startDownloadButtonTitle` - button's title
   - `startDownloadButtonTitleFont` - button's title font
@@ -99,13 +107,13 @@ extension DownloadViewController: AHDownloadButtonDelegate {
   - `startDownloadButtonNonhighlightedTitleColor` - title color for the button when it's in nonhighlighted state (when the button is not pressed)
 
 
-2. Customization properties when button is in `pending` state:
+3. Customization properties when button is in `pending` state:
 
   - `pendingCircleColor` - color of the pending circle
   - `pendingCircleLineWidth` - width of the pending circle
 
 
-3. Customization properties when button is in `downloading` state:
+4. Customization properties when button is in `downloading` state:
 
   - `downloadingButtonHighlightedTrackCircleColor` - color for the track circle when it's in highlighted state (when the user presses the button)
   - `downloadingButtonNonhighlightedTrackCircleColor` - color for the track circle when it's in nonhighlighted state (when the button is not pressed)
@@ -113,9 +121,10 @@ extension DownloadViewController: AHDownloadButtonDelegate {
   - `downloadingButtonNonhighlightedProgressCircleColor` - color for the progress circle when it's in nonhighlighted state (when the button is not pressed)
   - `downloadingButtonHighlightedStopViewColor` - color for the stop view in the middle of the progress circle when it's in highlighted state (when the user presses the button)
   - `downloadingButtonNonhighlightedStopViewColor` - color for the stop view in the middle of the progress circle when it's in nonhighlighted state (when the button is not pressed)
+  - `downloadingButtonCircleLineWidth` -  width of the downloading circle
 
 
-4. Customization properties when button is in `downloaded` state:
+5. Customization properties when button is in `downloaded` state:
 
   - `downloadedButtonTitle` - button's title
   - `downloadedButtonTitleFont` - button's title font
@@ -124,6 +133,8 @@ extension DownloadViewController: AHDownloadButtonDelegate {
   - `downloadedButtonNonhighlightedBackgroundColor` - background color for the button when it's in nonhighlighted state (when the button is not pressed)
   - `downloadedButtonHighlightedTitleColor` - title color for the button when it's in highlighted state (when the user presses the button)
   - `downloadedButtonNonhighlightedTitleColor` - title color for the button when it's in nonhighlighted state (when the button is not pressed)
+  
+6. `transitionAnimationDuration` - animation duration between the different states of the button
   
 ### Special note
 
