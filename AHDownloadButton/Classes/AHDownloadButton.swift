@@ -31,13 +31,11 @@ public final class AHDownloadButton: UIView {
     }
 
     public enum HorizontalAlignment: Int {
-        case trailing, leading, center, left, right
+        case center, left, right
 
         var relativeLayoutAttribute: NSLayoutConstraint.Attribute {
             switch self {
             case .center: return .centerX
-            case .trailing: return .trailing
-            case .leading: return .leading
             case .right: return .right
             case .left: return .left
             }
