@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		19C0725A21FF32E00081B420 /* CircleViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C0725921FF32E00081B420 /* CircleViewTests.swift */; };
+		19C0725E21FF902C0081B420 /* ProgressButtonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C0725D21FF902C0081B420 /* ProgressButtonTests.swift */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* DownloadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* DownloadViewController.swift */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
@@ -29,6 +30,7 @@
 /* Begin PBXFileReference section */
 		023A2A6DD90614A817E77D09 /* Pods-AHDownloadButton_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AHDownloadButton_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-AHDownloadButton_Example/Pods-AHDownloadButton_Example.release.xcconfig"; sourceTree = "<group>"; };
 		19C0725921FF32E00081B420 /* CircleViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleViewTests.swift; sourceTree = "<group>"; };
+		19C0725D21FF902C0081B420 /* ProgressButtonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressButtonTests.swift; sourceTree = "<group>"; };
 		3B1E2116AD5843C693919D1D /* Pods_AHDownloadButton_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AHDownloadButton_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD01AFB9204008FA782 /* AHDownloadButton_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AHDownloadButton_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -123,8 +125,9 @@
 		607FACE81AFB9204008FA782 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				607FACE91AFB9204008FA782 /* Supporting Files */,
+				19C0725D21FF902C0081B420 /* ProgressButtonTests.swift */,
 				19C0725921FF32E00081B420 /* CircleViewTests.swift */,
+				607FACE91AFB9204008FA782 /* Supporting Files */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -375,6 +378,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19C0725E21FF902C0081B420 /* ProgressButtonTests.swift in Sources */,
 				19C0725A21FF32E00081B420 /* CircleViewTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
