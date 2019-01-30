@@ -10,6 +10,8 @@
 		19C0725A21FF32E00081B420 /* CircleViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C0725921FF32E00081B420 /* CircleViewTests.swift */; };
 		19C0725E21FF902C0081B420 /* ProgressButtonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C0725D21FF902C0081B420 /* ProgressButtonTests.swift */; };
 		19C0726021FFA2230081B420 /* HighlightableRoundedButtonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C0725F21FFA2230081B420 /* HighlightableRoundedButtonTests.swift */; };
+		19C0726221FFA4D20081B420 /* AHDownloadButtonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C0726121FFA4D20081B420 /* AHDownloadButtonTests.swift */; };
+		19C0726622005A720081B420 /* AHDownloadButtonDelegateMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C07264220059E10081B420 /* AHDownloadButtonDelegateMock.swift */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* DownloadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* DownloadViewController.swift */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
@@ -33,6 +35,8 @@
 		19C0725921FF32E00081B420 /* CircleViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleViewTests.swift; sourceTree = "<group>"; };
 		19C0725D21FF902C0081B420 /* ProgressButtonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressButtonTests.swift; sourceTree = "<group>"; };
 		19C0725F21FFA2230081B420 /* HighlightableRoundedButtonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighlightableRoundedButtonTests.swift; sourceTree = "<group>"; };
+		19C0726121FFA4D20081B420 /* AHDownloadButtonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AHDownloadButtonTests.swift; sourceTree = "<group>"; };
+		19C07264220059E10081B420 /* AHDownloadButtonDelegateMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AHDownloadButtonDelegateMock.swift; sourceTree = "<group>"; };
 		3B1E2116AD5843C693919D1D /* Pods_AHDownloadButton_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AHDownloadButton_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD01AFB9204008FA782 /* AHDownloadButton_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AHDownloadButton_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -71,6 +75,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		19C07263220059CA0081B420 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				19C07264220059E10081B420 /* AHDownloadButtonDelegateMock.swift */,
+			);
+			name = Mocks;
+			sourceTree = "<group>";
+		};
 		3ECFBFDBAF4BF0E76921C002 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -127,9 +139,11 @@
 		607FACE81AFB9204008FA782 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				19C0726121FFA4D20081B420 /* AHDownloadButtonTests.swift */,
 				19C0725F21FFA2230081B420 /* HighlightableRoundedButtonTests.swift */,
 				19C0725D21FF902C0081B420 /* ProgressButtonTests.swift */,
 				19C0725921FF32E00081B420 /* CircleViewTests.swift */,
+				19C07263220059CA0081B420 /* Mocks */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
 			);
 			path = Tests;
@@ -382,7 +396,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				19C0725E21FF902C0081B420 /* ProgressButtonTests.swift in Sources */,
+				19C0726622005A720081B420 /* AHDownloadButtonDelegateMock.swift in Sources */,
 				19C0726021FFA2230081B420 /* HighlightableRoundedButtonTests.swift in Sources */,
+				19C0726221FFA4D20081B420 /* AHDownloadButtonTests.swift in Sources */,
 				19C0725A21FF32E00081B420 /* CircleViewTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
