@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'AHDownloadButton'
-  s.version          = '1.1.0'
+  s.version          = '1.2.0'
   s.summary          = 'Customisable download button with progress animation'
 
   s.description      = <<-DESC
@@ -17,5 +17,5 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '8.0'
   s.source_files = 'AHDownloadButton/Classes/**/*'
   s.frameworks = 'UIKit'
-  s.swift_version = '4.2'
+  s.swift_version = '5.0'
 end
