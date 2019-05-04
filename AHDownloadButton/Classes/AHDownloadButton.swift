@@ -9,7 +9,7 @@
 import UIKit
 
 public protocol AHDownloadButtonDelegate: class {
-    @available(*, deprecated: 1.1.0, message: "Use downloadButton(_:, tappedWithState:) method")
+    @available(*, deprecated, message: "Use downloadButton(_:, tappedWithState:) method")
     func didTapDownloadButton(_ downloadButton: AHDownloadButton, withState state: AHDownloadButton.State)
     func downloadButton(_ downloadButton: AHDownloadButton, stateChanged state: AHDownloadButton.State)
     func downloadButton(_ downloadButton: AHDownloadButton, tappedWithState state: AHDownloadButton.State)
