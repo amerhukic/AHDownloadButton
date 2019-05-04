@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-    <img src="https://img.shields.io/badge/Swift-4.2-orange.svg" />
+    <img src="https://img.shields.io/badge/Swift-5.0-orange.svg" />
     <a href="https://cocoapods.org/pods/AHDownloadButton">
         <img src="https://img.shields.io/cocoapods/v/AHDownloadButton.svg?style=flat" alt="Pod Version">
     </a>
@@ -27,8 +27,8 @@ It features download progress animation as well as animated transitions between 
 ## Requirements
 
 - iOS 8.0+
-- Xcode 9.0+
-- Swift 4.0+
+- Xcode 10.2
+- Swift 5.0
 
 ## Usage
 
