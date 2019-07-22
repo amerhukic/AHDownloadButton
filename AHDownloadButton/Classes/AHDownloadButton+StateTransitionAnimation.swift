@@ -45,7 +45,7 @@ extension AHDownloadButton {
     private func animateTransitionFromStartDownloadToPending(completion: @escaping (Bool) -> Void) {
         startDownloadButton.titleLabel?.alpha = 0
         startDownloadButtonWidthConstraint.constant = pendingViewWidthConstraint.constant
-        UIView.animate(withDuration: transitionAnimationDuration, animations: {
+        UIView.animate(withDuration: transitionAnimationDuration, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 0.5, options: .curveEaseIn, animations:{
             self.layoutIfNeeded()
         }, completion: { completed in
             completion(completed)
@@ -58,7 +58,7 @@ extension AHDownloadButton {
     private func animateTransitionFromStartDownloadToDownloading(completion: @escaping (Bool) -> Void) {
         startDownloadButton.titleLabel?.alpha = 0
         startDownloadButtonWidthConstraint.constant = downloadingButtonWidthConstraint.constant
-        UIView.animate(withDuration: transitionAnimationDuration, animations: {
+        UIView.animate(withDuration: transitionAnimationDuration, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 0.5, options: .curveEaseIn, animations:{
             self.layoutIfNeeded()
         }, completion: { completed in
             completion(completed)
@@ -73,7 +73,7 @@ extension AHDownloadButton {
         
         startDownloadButton.alpha = 1
         startDownloadButtonWidthConstraint.constant = startDownloadButtonFullWidth
-        UIView.animate(withDuration: transitionAnimationDuration, animations: {
+        UIView.animate(withDuration: transitionAnimationDuration, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 0.5, options: .curveEaseIn, animations:{
             self.pendingCircleView.alpha = 0
             self.startDownloadButton.titleLabel?.alpha = 1
             self.layoutIfNeeded()
@@ -83,7 +83,7 @@ extension AHDownloadButton {
     private func animateTransitionFromPendingToDownloading(completion: @escaping (Bool) -> Void) {
         pendingCircleView.alpha = 1
         downloadingButton.alpha = 0
-        UIView.animate(withDuration: transitionAnimationDuration, animations: {
+        UIView.animate(withDuration: transitionAnimationDuration, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 0.5, options: .curveEaseIn, animations:{
             self.pendingCircleView.alpha = 0
             self.downloadingButton.alpha = 1
         }, completion: completion)
@@ -96,7 +96,7 @@ extension AHDownloadButton {
         
         downloadedButton.titleLabel?.alpha = 0
         downloadedButtonWidthConstraint.constant = downloadedButtonFullWidth
-        UIView.animate(withDuration: transitionAnimationDuration, animations: {
+        UIView.animate(withDuration: transitionAnimationDuration, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 0.5, options: .curveEaseIn, animations:{
             self.downloadingButton.alpha = 0
             self.downloadedButton.titleLabel?.alpha = 1
             self.layoutIfNeeded()
@@ -110,7 +110,7 @@ extension AHDownloadButton {
         downloadingButton.alpha = 0
         startDownloadButton.alpha = 1
         startDownloadButtonWidthConstraint.constant = startDownloadButtonFullWidth
-        UIView.animate(withDuration: transitionAnimationDuration, animations: {
+        UIView.animate(withDuration: transitionAnimationDuration, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 0.5, options: .curveEaseIn, animations:{
             self.startDownloadButton.titleLabel?.alpha = 1
             self.layoutIfNeeded()
         }, completion: completion)
