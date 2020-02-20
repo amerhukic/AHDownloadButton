@@ -46,14 +46,14 @@ public final class AHDownloadButton: UIView {
     
     /// Start download button customisation properties
     
-    public var startDownloadButtonImage : UIImage {
+    public var startDownloadButtonImage : UIImage? {
         didSet {
             startDownloadButton.setImage(startDownloadButtonImage, for: .normal)
 
         }
     }
     
-    public var startDownloadButtonTitle: String = "GET" {
+    public var startDownloadButtonTitle: String? {
         didSet {
             startDownloadButton.setTitle(startDownloadButtonTitle, for: .normal)
         }
@@ -157,14 +157,14 @@ public final class AHDownloadButton: UIView {
     
     /// Downloaded button customisation properties
     
-    public var downloadedButtonImage: UIImage {
+    public var downloadedButtonImage: UIImage? {
         didSet {
-            downloadedButton.setTitle(downloadedButtonImage, for: .normal)
+            downloadedButton.setImage(downloadedButtonImage, for: .normal)
         }
     }
 
     
-    public var downloadedButtonTitle: String = "OPEN" {
+    public var downloadedButtonTitle: String? {
         didSet {
             downloadedButton.setImage(startDownloadButtonImage, for: .normal)
 

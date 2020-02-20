@@ -11,8 +11,13 @@ import UIKit
 extension UIButton {
     
     var titleWidth: CGFloat {
-        guard let text = titleLabel?.text, let font = titleLabel?.font else { return 0 }
-        return text.size(withAttributes: [.font: font]).width
+        if let text = titleLabel?.text, let font = titleLabel?.font, !text.isEmpty {
+            return text.size(withAttributes: [.font: font]).width
+        }else if let image = imageView?.image{
+            return image.size.width
+        }else {
+             return 0
+        }
     }
     
 }
