@@ -49,6 +49,7 @@ public final class AHDownloadButton: UIView {
     public var startDownloadButtonTitle: String = "GET" {
         didSet {
             startDownloadButton.setTitle(startDownloadButtonTitle, for: .normal)
+            startDownloadButtonTitleWidth = 0
         }
     }
     
@@ -153,6 +154,7 @@ public final class AHDownloadButton: UIView {
     public var downloadedButtonTitle: String = "OPEN" {
         didSet {
             downloadedButton.setTitle(downloadedButtonTitle, for: .normal)
+            downloadedButtonTitleWidth = 0
         }
     }
     
