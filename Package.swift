@@ -14,5 +14,9 @@ let package = Package(
         .target(
             name: "AHDownloadButton",
             dependencies: []),
+    ],
+    swiftLanguageVersions: [
+        .v5
     ]
+    
 )
