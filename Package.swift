@@ -10,6 +10,6 @@ let package = Package(
     targets: [
         .target(
             name: "AHDownloadButton",
-            dependencies: ["AHDownloadButton"]),
+            dependencies: []),
     ]
 )

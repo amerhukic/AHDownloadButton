@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
   s.social_media_url = 'https://twitter.com/hukicamer'
 
   s.ios.deployment_target = '8.0'
-  s.source_files = 'AHDownloadButton/Classes/**/*'
+  s.source_files = 'Sources/AHDownloadButton/Classes/**/*'
   s.frameworks = 'UIKit'
   s.swift_version = '5.0'
 end
