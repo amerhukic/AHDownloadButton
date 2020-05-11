@@ -9,7 +9,6 @@ let package = Package(
     ],
     products: [
         .library(name: "AHDownloadButton", targets: ["AHDownloadButton"])
-        
     ],
     targets: [
         .target(
