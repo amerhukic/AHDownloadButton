@@ -80,6 +80,6 @@ final class ProgressCircleView: UIView {
 
 extension ProgressCircleView: CAAnimationDelegate {
     func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
-        isAnimating = !flag
+        isAnimating = false
     }
 }
