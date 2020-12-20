@@ -74,7 +74,7 @@ final class ProgressCircleView: UIView {
         animation.fromValue = startValue
         animation.duration = progressAnimationDuration
         animation.delegate = self
-        circleView.circleLayer.add(animation, forKey: "strokeEnd")
+        circleView.circleLayer.add(animation, forKey: nil)
     }
 }
 
