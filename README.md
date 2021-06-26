@@ -7,6 +7,9 @@
     <a href="https://cocoapods.org/pods/AHDownloadButton">
         <img src="https://img.shields.io/cocoapods/v/AHDownloadButton.svg?style=flat" alt="Pod Version">
     </a>
+    <a href="https://img.shields.io/badge/Swift_Package_Manager-compatible-orange">
+        <img src="https://img.shields.io/badge/Swift_Package_Manager-compatible-orange" alt="SPM compatible">
+    </a>
     <a href="https://github.com/Carthage/Carthage">
         <img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat" alt="Carthage compatible">
     </a>
@@ -27,8 +30,8 @@ It features download progress animation as well as animated transitions between 
 ## Requirements
 
 - iOS 8.0+
-- Xcode 10.2
-- Swift 5.0
+- Xcode 10.2+
+- Swift 5.0+
 
 ## Usage
 
@@ -170,6 +173,26 @@ Then, run the following command:
 
 ```bash
 $ pod install
+```
+
+### Carthage
+
+[Carthage](https://github.com/Carthage/Carthage) is a decentralized dependency manager that builds your dependencies and provides you with binary frameworks. To integrate AHDownloadButton into your Xcode project using Carthage, specify it in your `Cartfile`:
+
+```ogdl
+github "amerhukic/AHDownloadButton" ~> 1.3.0
+```
+
+### Swift Package Manager
+
+The [Swift Package Manager](https://swift.org/package-manager/) is a tool for automating the distribution of Swift code and is integrated into the `swift` compiler.
+
+Once you have your Swift package set up, adding AHDownloadButton as a dependency is as easy as adding it to the `dependencies` value of your `Package.swift`.
+
+```swift
+dependencies: [
+    .package(url: "https://github.com/amerhukic/AHDownloadButton", .upToNextMajor(from: "1.3.0"))
+]
 ```
 
 ## Author
