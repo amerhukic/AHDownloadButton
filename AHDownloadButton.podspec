@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'AHDownloadButton'
-  s.version          = '1.2.0'
+  s.version          = '1.3.0'
   s.summary          = 'Customisable download button with progress animation'
 
   s.description      = <<-DESC
