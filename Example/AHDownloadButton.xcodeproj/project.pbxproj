@@ -33,6 +33,7 @@
 
 /* Begin PBXFileReference section */
 		023A2A6DD90614A817E77D09 /* Pods-AHDownloadButton_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AHDownloadButton_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-AHDownloadButton_Example/Pods-AHDownloadButton_Example.release.xcconfig"; sourceTree = "<group>"; };
+		19225E942687696B003BE6D8 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Package.swift; path = ../Package.swift; sourceTree = "<group>"; };
 		19C0725921FF32E00081B420 /* CircleViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleViewTests.swift; sourceTree = "<group>"; };
 		19C0725D21FF902C0081B420 /* ProgressButtonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressButtonTests.swift; sourceTree = "<group>"; };
 		19C0725F21FFA2230081B420 /* HighlightableRoundedButtonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighlightableRoundedButtonTests.swift; sourceTree = "<group>"; };
@@ -99,7 +100,7 @@
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
-				607FACF51AFB993E008FA782 /* Podspec Metadata */,
+				607FACF51AFB993E008FA782 /* Metadata */,
 				607FACD21AFB9204008FA782 /* Example for AHDownloadButton */,
 				607FACE81AFB9204008FA782 /* Tests */,
 				607FACD11AFB9204008FA782 /* Products */,
@@ -160,14 +161,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		607FACF51AFB993E008FA782 /* Podspec Metadata */ = {
+		607FACF51AFB993E008FA782 /* Metadata */ = {
 			isa = PBXGroup;
 			children = (
+				19225E942687696B003BE6D8 /* Package.swift */,
 				C9058B0578548461E8B23A49 /* AHDownloadButton.podspec */,
 				67CF4BFAD38CEE7D0694966C /* README.md */,
 				93119861EEF364B63633C26D /* LICENSE */,
 			);
-			name = "Podspec Metadata";
+			name = Metadata;
 			sourceTree = "<group>";
 		};
 		F2F732821F47C472BDE464B2 /* Frameworks */ = {

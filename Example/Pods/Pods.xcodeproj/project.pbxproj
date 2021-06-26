@@ -8,21 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		18BD8FA6C8AB43BA926A10E2E51655AC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
-		19ED9D2B214FA5E100127616 /* ProgressCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19ED9D2A214FA5E100127616 /* ProgressCircleView.swift */; };
+		19225E8B268755CC003BE6D8 /* HighlightableRoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19225E82268755CB003BE6D8 /* HighlightableRoundedButton.swift */; };
+		19225E8C268755CC003BE6D8 /* AHDownloadButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19225E83268755CB003BE6D8 /* AHDownloadButton.swift */; };
+		19225E8D268755CC003BE6D8 /* ProgressButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19225E84268755CB003BE6D8 /* ProgressButton.swift */; };
+		19225E8E268755CC003BE6D8 /* UIButton+TitleWidth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19225E85268755CB003BE6D8 /* UIButton+TitleWidth.swift */; };
+		19225E8F268755CC003BE6D8 /* UIView+Constraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19225E86268755CC003BE6D8 /* UIView+Constraint.swift */; };
+		19225E90268755CC003BE6D8 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19225E87268755CC003BE6D8 /* CircleView.swift */; };
+		19225E91268755CC003BE6D8 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19225E88268755CC003BE6D8 /* Color.swift */; };
+		19225E92268755CC003BE6D8 /* AHDownloadButton+StateTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19225E89268755CC003BE6D8 /* AHDownloadButton+StateTransitionAnimation.swift */; };
+		19225E93268755CC003BE6D8 /* ProgressCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19225E8A268755CC003BE6D8 /* ProgressCircleView.swift */; };
 		269634DCEB710BE596C7E624BC85D9AE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
 		2A402A88FBAA27384891817A4458C469 /* AHDownloadButton-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 675A72E53B07EB916B70E51627009A83 /* AHDownloadButton-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		30315FF7366D4AAF7A1DED270290996E /* UIButton+TitleWidth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8D3A9B5BB664BC8AA9E00B47EF7B21 /* UIButton+TitleWidth.swift */; };
-		3B74E000C3FB5B993FFD4ABF5A48E177 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73205F03BCD51D232875EDAE0CFC918E /* CircleView.swift */; };
 		410B78E1008991475882F99E94ABA74B /* Pods-AHDownloadButton_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AAD7D501D2D553782A5A036D8760172E /* Pods-AHDownloadButton_Example-dummy.m */; };
 		4D0096ED5F5BF2ED9BE819E700E97197 /* AHDownloadButton-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 71320DF77201F08F2590C086B4A7EF29 /* AHDownloadButton-dummy.m */; };
-		5E0CE0588DBF171EE3E27E16E2FA2C9C /* HighlightableRoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B365544441E1C1D599B2D8DDA364301 /* HighlightableRoundedButton.swift */; };
-		6288E9F276AFE564B6ACA99708B56590 /* ProgressButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C42205F73EE6CB9CDE7EE345A9FEF31 /* ProgressButton.swift */; };
-		70D4500F92EAA4C6CB733D9F10940C32 /* AHDownloadButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE913B2CAA66798BAD263623F2EB0CD5 /* AHDownloadButton.swift */; };
 		7796AD5499A20667DE861B9C15C339BC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B63C6A64CF66340668996F78DA6BB482 /* UIKit.framework */; };
 		8CB9407E82529AE147083295EE4E2DB2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
-		BD6528A1C9E866F8750A50A15FDC1278 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7747C1DF1D72E89B74DB9926D1BD0DF2 /* Color.swift */; };
-		BFB515017B0D10CE0B20D5B0DD1BC91C /* AHDownloadButton+StateTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C722074ECFF87131F2C3CE1B01B9BF12 /* AHDownloadButton+StateTransitionAnimation.swift */; };
-		C437CEE847CAB872643AA5620301A97F /* UIView+Constraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E18D172090CE8DE892505B497EB3310 /* UIView+Constraint.swift */; };
 		C4ED2A0DBBA6E2E34315BA602D20C21F /* Pods-AHDownloadButton_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D5B1439F43D86F1BD256B06A821F69E /* Pods-AHDownloadButton_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CE31ABDE859F8A1F7ECB0A44C70DCCBB /* Pods-AHDownloadButton_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 001614AED7D4B3C8331378A2E602240E /* Pods-AHDownloadButton_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E418678ACE60BBD2363EAC002DAB153A /* Pods-AHDownloadButton_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 93FCDDAA26EECE0CA95337AF750D806F /* Pods-AHDownloadButton_Tests-dummy.m */; };
@@ -43,19 +43,22 @@
 		023AE4AF935E1E6700560C670DE57CE9 /* AHDownloadButton.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = AHDownloadButton.modulemap; sourceTree = "<group>"; };
 		07BA7298A48EBB23604D616C1EEFD8C3 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		10B1F7DE36E6D59FFDE34F3976D7978A /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		19225E82268755CB003BE6D8 /* HighlightableRoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HighlightableRoundedButton.swift; path = Sources/AHDownloadButton/Classes/HighlightableRoundedButton.swift; sourceTree = "<group>"; };
+		19225E83268755CB003BE6D8 /* AHDownloadButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AHDownloadButton.swift; path = Sources/AHDownloadButton/Classes/AHDownloadButton.swift; sourceTree = "<group>"; };
+		19225E84268755CB003BE6D8 /* ProgressButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProgressButton.swift; path = Sources/AHDownloadButton/Classes/ProgressButton.swift; sourceTree = "<group>"; };
+		19225E85268755CB003BE6D8 /* UIButton+TitleWidth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIButton+TitleWidth.swift"; path = "Sources/AHDownloadButton/Classes/UIButton+TitleWidth.swift"; sourceTree = "<group>"; };
+		19225E86268755CC003BE6D8 /* UIView+Constraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIView+Constraint.swift"; path = "Sources/AHDownloadButton/Classes/UIView+Constraint.swift"; sourceTree = "<group>"; };
+		19225E87268755CC003BE6D8 /* CircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CircleView.swift; path = Sources/AHDownloadButton/Classes/CircleView.swift; sourceTree = "<group>"; };
+		19225E88268755CC003BE6D8 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Color.swift; path = Sources/AHDownloadButton/Classes/Color.swift; sourceTree = "<group>"; };
+		19225E89268755CC003BE6D8 /* AHDownloadButton+StateTransitionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "AHDownloadButton+StateTransitionAnimation.swift"; path = "Sources/AHDownloadButton/Classes/AHDownloadButton+StateTransitionAnimation.swift"; sourceTree = "<group>"; };
+		19225E8A268755CC003BE6D8 /* ProgressCircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProgressCircleView.swift; path = Sources/AHDownloadButton/Classes/ProgressCircleView.swift; sourceTree = "<group>"; };
 		19523442BDA46951F36DB4C86363CAB1 /* Pods-AHDownloadButton_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AHDownloadButton_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		19ED9D2A214FA5E100127616 /* ProgressCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProgressCircleView.swift; path = AHDownloadButton/Classes/ProgressCircleView.swift; sourceTree = "<group>"; };
 		31C514260F3D6E73469B9E09EA52A0F2 /* Pods-AHDownloadButton_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-AHDownloadButton_Example.modulemap"; sourceTree = "<group>"; };
-		3B8D3A9B5BB664BC8AA9E00B47EF7B21 /* UIButton+TitleWidth.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIButton+TitleWidth.swift"; path = "AHDownloadButton/Classes/UIButton+TitleWidth.swift"; sourceTree = "<group>"; };
 		41A93D4B342FF126BC71D5318F205E6C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4E18D172090CE8DE892505B497EB3310 /* UIView+Constraint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+Constraint.swift"; path = "AHDownloadButton/Classes/UIView+Constraint.swift"; sourceTree = "<group>"; };
 		675A72E53B07EB916B70E51627009A83 /* AHDownloadButton-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AHDownloadButton-umbrella.h"; sourceTree = "<group>"; };
 		6ABBEC3E0476AE9D7C77B786BA699151 /* Pods_AHDownloadButton_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AHDownloadButton_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6C42205F73EE6CB9CDE7EE345A9FEF31 /* ProgressButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ProgressButton.swift; path = AHDownloadButton/Classes/ProgressButton.swift; sourceTree = "<group>"; };
 		7017D38F2EEFA1C894AD77A059C55953 /* AHDownloadButton.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; path = AHDownloadButton.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		71320DF77201F08F2590C086B4A7EF29 /* AHDownloadButton-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AHDownloadButton-dummy.m"; sourceTree = "<group>"; };
-		73205F03BCD51D232875EDAE0CFC918E /* CircleView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CircleView.swift; path = AHDownloadButton/Classes/CircleView.swift; sourceTree = "<group>"; };
-		7747C1DF1D72E89B74DB9926D1BD0DF2 /* Color.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Color.swift; path = AHDownloadButton/Classes/Color.swift; sourceTree = "<group>"; };
 		7E93A682D479ED15C6A5042E32986E2F /* Pods-AHDownloadButton_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AHDownloadButton_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		7E9C68CE4B39ED801F5EDC74147B2B9F /* Pods-AHDownloadButton_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AHDownloadButton_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		7FD7E173BCDFFE7CA0AB9C4AEAE5757A /* Pods-AHDownloadButton_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AHDownloadButton_Example-resources.sh"; sourceTree = "<group>"; };
@@ -64,7 +67,6 @@
 		93FCDDAA26EECE0CA95337AF750D806F /* Pods-AHDownloadButton_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AHDownloadButton_Tests-dummy.m"; sourceTree = "<group>"; };
 		9440CA46BA0053D75F956F52A216EF81 /* Pods-AHDownloadButton_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AHDownloadButton_Tests-resources.sh"; sourceTree = "<group>"; };
 		950A911906B7369ECEADBD7B632A7C72 /* Pods-AHDownloadButton_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AHDownloadButton_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		9B365544441E1C1D599B2D8DDA364301 /* HighlightableRoundedButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HighlightableRoundedButton.swift; path = AHDownloadButton/Classes/HighlightableRoundedButton.swift; sourceTree = "<group>"; };
 		9D5B1439F43D86F1BD256B06A821F69E /* Pods-AHDownloadButton_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-AHDownloadButton_Tests-umbrella.h"; sourceTree = "<group>"; };
 		A212FFBA277FE6DDBFA55DF0D30B1F6A /* Pods-AHDownloadButton_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AHDownloadButton_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		A90CBC4FF97BC9E1DB735F15F179E6BE /* Pods-AHDownloadButton_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-AHDownloadButton_Tests.modulemap"; sourceTree = "<group>"; };
@@ -74,10 +76,8 @@
 		B9E59A98034D09129439C15B3CE2670B /* Pods-AHDownloadButton_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AHDownloadButton_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		BD58D99CE6BE47DCAE72D95157BF2472 /* AHDownloadButton-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AHDownloadButton-prefix.pch"; sourceTree = "<group>"; };
 		BFDFEC92EAC1F192D0BB356D40CAA710 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C722074ECFF87131F2C3CE1B01B9BF12 /* AHDownloadButton+StateTransitionAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "AHDownloadButton+StateTransitionAnimation.swift"; path = "AHDownloadButton/Classes/AHDownloadButton+StateTransitionAnimation.swift"; sourceTree = "<group>"; };
 		C7A92EBD46D262955E0C4FD3D2821E2B /* AHDownloadButton.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AHDownloadButton.xcconfig; sourceTree = "<group>"; };
 		CDBF91FB34AF748A17E31A368D752439 /* Pods_AHDownloadButton_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AHDownloadButton_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CE913B2CAA66798BAD263623F2EB0CD5 /* AHDownloadButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AHDownloadButton.swift; path = AHDownloadButton/Classes/AHDownloadButton.swift; sourceTree = "<group>"; };
 		CF6A10698CE92ED3E5A522FC3AF03AF8 /* Pods-AHDownloadButton_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AHDownloadButton_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		D9D13C3522FF7A20B22D4CA2984467E5 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
@@ -185,15 +185,15 @@
 		72C964AFC27B32657983DFADE242214A /* AHDownloadButton */ = {
 			isa = PBXGroup;
 			children = (
-				CE913B2CAA66798BAD263623F2EB0CD5 /* AHDownloadButton.swift */,
-				C722074ECFF87131F2C3CE1B01B9BF12 /* AHDownloadButton+StateTransitionAnimation.swift */,
-				9B365544441E1C1D599B2D8DDA364301 /* HighlightableRoundedButton.swift */,
-				6C42205F73EE6CB9CDE7EE345A9FEF31 /* ProgressButton.swift */,
-				19ED9D2A214FA5E100127616 /* ProgressCircleView.swift */,
-				73205F03BCD51D232875EDAE0CFC918E /* CircleView.swift */,
-				7747C1DF1D72E89B74DB9926D1BD0DF2 /* Color.swift */,
-				3B8D3A9B5BB664BC8AA9E00B47EF7B21 /* UIButton+TitleWidth.swift */,
-				4E18D172090CE8DE892505B497EB3310 /* UIView+Constraint.swift */,
+				19225E83268755CB003BE6D8 /* AHDownloadButton.swift */,
+				19225E89268755CC003BE6D8 /* AHDownloadButton+StateTransitionAnimation.swift */,
+				19225E87268755CC003BE6D8 /* CircleView.swift */,
+				19225E88268755CC003BE6D8 /* Color.swift */,
+				19225E82268755CB003BE6D8 /* HighlightableRoundedButton.swift */,
+				19225E84268755CB003BE6D8 /* ProgressButton.swift */,
+				19225E8A268755CC003BE6D8 /* ProgressCircleView.swift */,
+				19225E85268755CB003BE6D8 /* UIButton+TitleWidth.swift */,
+				19225E86268755CC003BE6D8 /* UIView+Constraint.swift */,
 				EF195ED335C0AAD71E047DC0882E49C6 /* Pod */,
 				123FB98CF02D6160388F5E7EEA61EDA0 /* Support Files */,
 			);
@@ -340,7 +340,7 @@
 				LastUpgradeCheck = 1220;
 				TargetAttributes = {
 					5861F89810CEE384FB44FEE40E48FBC4 = {
-						LastSwiftMigration = 1020;
+						LastSwiftMigration = 1250;
 					};
 				};
 			};
@@ -369,16 +369,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				19ED9D2B214FA5E100127616 /* ProgressCircleView.swift in Sources */,
-				BFB515017B0D10CE0B20D5B0DD1BC91C /* AHDownloadButton+StateTransitionAnimation.swift in Sources */,
+				19225E8E268755CC003BE6D8 /* UIButton+TitleWidth.swift in Sources */,
+				19225E93268755CC003BE6D8 /* ProgressCircleView.swift in Sources */,
+				19225E8D268755CC003BE6D8 /* ProgressButton.swift in Sources */,
+				19225E8C268755CC003BE6D8 /* AHDownloadButton.swift in Sources */,
+				19225E8F268755CC003BE6D8 /* UIView+Constraint.swift in Sources */,
+				19225E8B268755CC003BE6D8 /* HighlightableRoundedButton.swift in Sources */,
+				19225E92268755CC003BE6D8 /* AHDownloadButton+StateTransitionAnimation.swift in Sources */,
+				19225E91268755CC003BE6D8 /* Color.swift in Sources */,
+				19225E90268755CC003BE6D8 /* CircleView.swift in Sources */,
 				4D0096ED5F5BF2ED9BE819E700E97197 /* AHDownloadButton-dummy.m in Sources */,
-				70D4500F92EAA4C6CB733D9F10940C32 /* AHDownloadButton.swift in Sources */,
-				3B74E000C3FB5B993FFD4ABF5A48E177 /* CircleView.swift in Sources */,
-				BD6528A1C9E866F8750A50A15FDC1278 /* Color.swift in Sources */,
-				5E0CE0588DBF171EE3E27E16E2FA2C9C /* HighlightableRoundedButton.swift in Sources */,
-				6288E9F276AFE564B6ACA99708B56590 /* ProgressButton.swift in Sources */,
-				30315FF7366D4AAF7A1DED270290996E /* UIButton+TitleWidth.swift in Sources */,
-				C437CEE847CAB872643AA5620301A97F /* UIView+Constraint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,6 +414,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C7A92EBD46D262955E0C4FD3D2821E2B /* AHDownloadButton.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -511,6 +512,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C7A92EBD46D262955E0C4FD3D2821E2B /* AHDownloadButton.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
