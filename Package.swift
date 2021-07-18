@@ -5,7 +5,7 @@ import PackageDescription
 let package = Package(
     name: "AHDownloadButton",
     platforms: [
-        .iOS(.v8)
+        .iOS(.v10)
     ],
     products: [
         .library(
