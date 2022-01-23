@@ -8,19 +8,6 @@
 
 import UIKit
 
-public protocol AHDownloadButtonDelegate: AnyObject {
-    @available(*, deprecated, message: "Use downloadButton(_:, tappedWithState:) method")
-    func didTapDownloadButton(_ downloadButton: AHDownloadButton, withState state: AHDownloadButton.State)
-    func downloadButton(_ downloadButton: AHDownloadButton, stateChanged state: AHDownloadButton.State)
-    func downloadButton(_ downloadButton: AHDownloadButton, tappedWithState state: AHDownloadButton.State)
-}
-
-public extension AHDownloadButtonDelegate {
-    func didTapDownloadButton(_ downloadButton: AHDownloadButton, withState state: AHDownloadButton.State) { }
-    func downloadButton(_ downloadButton: AHDownloadButton, stateChanged state: AHDownloadButton.State) { }
-    func downloadButton(_ downloadButton: AHDownloadButton, tappedWithState state: AHDownloadButton.State) { }
-}
-
 public final class AHDownloadButton: UIView {
     
     public enum State {
@@ -194,7 +181,6 @@ public final class AHDownloadButton: UIView {
     
     public var state: State = .startDownload {
         didSet {
-            delegate?.downloadButton(self, stateChanged: state)
             downloadButtonStateChangedAction?(self, state)
             animationQueue.async { [currentState = state] in
                 self.animationDispatchGroup.enter()
@@ -215,9 +201,7 @@ public final class AHDownloadButton: UIView {
     public var transitionAnimationDuration: TimeInterval = 0.1
     
     /// Callbacks
-    
-    public weak var delegate: AHDownloadButtonDelegate?
-    
+
     public var didTapDownloadButtonAction: ((AHDownloadButton, State) -> Void)?
     
     public var downloadButtonStateChangedAction: ((AHDownloadButton, State) -> Void)?
@@ -446,8 +430,7 @@ public final class AHDownloadButton: UIView {
     // MARK: Action methods
     
     @objc private func currentButtonTapped() {
-        delegate?.downloadButton(self, tappedWithState: state)
-        didTapDownloadButtonAction?(self, state)
+        didTapDownloadButtonAction!(self, state)
     }
     
 }
