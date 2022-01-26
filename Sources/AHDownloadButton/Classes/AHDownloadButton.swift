@@ -208,25 +208,25 @@ public final class AHDownloadButton: UIView {
 
     // MARK: Private properties
     
-    let startDownloadButton: HighlightableRoundedButton = {
+    lazy var startDownloadButton: HighlightableRoundedButton = {
         let button = HighlightableRoundedButton()
         button.addTarget(self, action: #selector(currentButtonTapped), for: .touchUpInside)
         return button
     }()
     
-    let pendingCircleView: CircleView = {
+    lazy var pendingCircleView: CircleView = {
         let view = CircleView()
         view.endAngleRadians = view.startAngleRadians + 12 * .pi / 7
         return view
     }()
     
-    let downloadingButton: ProgressButton = {
+    lazy var downloadingButton: ProgressButton = {
         let button = ProgressButton()
         button.addTarget(self, action: #selector(currentButtonTapped), for: .touchUpInside)
         return button
     }()
     
-    let downloadedButton: HighlightableRoundedButton = {
+    lazy var downloadedButton: HighlightableRoundedButton = {
         let button = HighlightableRoundedButton()
         button.addTarget(self, action: #selector(currentButtonTapped), for: .touchUpInside)
         return button
